@@ -22,6 +22,7 @@ import java.util.List;
 
 
 public class Kanner extends FrameLayout {
+
     private int count;
     private ImageLoader mImageLoader;
     private List<ImageView> imageViews;
@@ -53,7 +54,7 @@ public class Kanner extends FrameLayout {
     private void initData() {
         imageViews = new ArrayList<ImageView>();
         iv_dots = new ArrayList<ImageView>();
-        delayTime = 2000;
+        delayTime = 3000;
     }
 
     public void setImagesUrl(String[] imagesUrl) {

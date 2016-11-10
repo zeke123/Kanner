@@ -5,7 +5,8 @@ import android.os.Bundle;
 
 import krelve.view.Kanner;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity
+{
     private Kanner kanner;
 
     @Override
@@ -21,7 +22,6 @@ public class MainActivity extends Activity {
         //"http://img03.muzhiwan.com/2015/06/16/upload_557fd2a8da7a3.jpg" });
         int[] imagesRes = {R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e};
         kanner.setImagesRes(imagesRes);
-
     }
 
     @Override

@@ -2,7 +2,6 @@ package krelve.view.kanner;
 
 import android.app.Activity;
 import android.os.Bundle;
-
 import krelve.view.Kanner;
 
 public class MainActivity extends Activity
@@ -10,7 +9,8 @@ public class MainActivity extends Activity
     private Kanner kanner;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         kanner = (Kanner) findViewById(R.id.kanner);
@@ -25,7 +25,8 @@ public class MainActivity extends Activity
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onDestroy()
+    {
         kanner.removeCallbacksAndMessages();
         super.onDestroy();
     }

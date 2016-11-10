@@ -13,15 +13,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
-
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Kanner extends FrameLayout {
     private int count;
@@ -72,8 +71,7 @@ public class Kanner extends FrameLayout {
 
     private void initLayout() {
         imageViews.clear();
-        View view = LayoutInflater.from(context).inflate(
-                R.layout.kanner_layout, this, true);
+        View view = LayoutInflater.from(context).inflate(R.layout.kanner_layout, this, true);
         vp = (ViewPager) view.findViewById(R.id.vp);
         ll_dot = (LinearLayout) view.findViewById(R.id.ll_dot);
         ll_dot.removeAllViews();
@@ -83,9 +81,7 @@ public class Kanner extends FrameLayout {
         count = imagesRes.length;
         for (int i = 0; i < count; i++) {
             ImageView iv_dot = new ImageView(context);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.leftMargin = 5;
             params.rightMargin = 5;
             iv_dot.setImageResource(R.drawable.dot_blur);
@@ -113,9 +109,7 @@ public class Kanner extends FrameLayout {
         count = imagesUrl.length;
         for (int i = 0; i < count; i++) {
             ImageView iv_dot = new ImageView(context);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.leftMargin = 5;
             params.rightMargin = 5;
             iv_dot.setImageResource(R.drawable.dot_blur);
@@ -187,8 +181,8 @@ public class Kanner extends FrameLayout {
         }
     };
 
-    class KannerPagerAdapter extends PagerAdapter {
-
+    class KannerPagerAdapter extends PagerAdapter
+    {
         @Override
         public int getCount() {
             return imageViews.size();
@@ -209,7 +203,6 @@ public class Kanner extends FrameLayout {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView(imageViews.get(position));
         }
-
     }
 
     class MyOnPageChangeListener implements OnPageChangeListener {
@@ -249,9 +242,7 @@ public class Kanner extends FrameLayout {
                 }
             }
         }
-
     }
-    
     public void removeCallbacksAndMessages() {
         handler.removeCallbacksAndMessages(null);
         context = null;

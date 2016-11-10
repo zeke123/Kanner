@@ -1,5 +1,4 @@
 package krelve.view;
-
 import android.content.Context;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
